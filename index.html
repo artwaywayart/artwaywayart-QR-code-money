@@ -41,38 +41,49 @@
 
 
         <!-- Main Content -->
-        <main class="flex-1 max-w-md mx-auto w-full px-4 py-6">
-            <div class="bg-white rounded-lg shadow-md p-6 mb-6">
-                
-                <!-- Amount Input -->
-                <div class="mb-6">
-                    <label for="amount" class="block text-lg font-medium text-gray-700 mb-3 text-center">
-                        ใส่จำนวนเงิน
-                    </label>
-                    <input 
-                        type="number" 
-                        id="amount" 
-                        class="w-full px-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 text-xl text-center"
-                        placeholder="กรอกจำนวนเงิน"
-                        min="0"
-                        step="1"
-                    >
+        <main class="flex-1 flex items-center justify-center min-h-full px-4 py-8">
+            <div class="w-full max-w-sm">
+                <div class="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
+                    
+                    <!-- Amount Input -->
+                    <div class="mb-8">
+                        <label for="amount" class="block text-xl font-semibold text-gray-800 mb-4 text-center">
+                            ใส่จำนวนเงิน
+                        </label>
+                        <div class="relative">
+                            <input 
+                                type="number" 
+                                id="amount" 
+                                class="w-full px-6 py-5 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-green-100 focus:border-green-500 text-2xl text-center font-medium transition-all duration-200 bg-gray-50 focus:bg-white"
+                                placeholder="0"
+                                min="0"
+                                step="1"
+                            >
+                            <div class="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 text-lg font-medium">
+                                บาท
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- QR Code Button -->
+                    <div>
+                        <button 
+                            id="qrButton"
+                            class="w-full text-white font-semibold py-5 px-6 rounded-xl transition-all duration-300 text-lg shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95"
+                            style="background: linear-gradient(135deg, #2b9348 0%, #1e6b33 100%)"
+                            onmouseover="this.style.background='linear-gradient(135deg, #1e6b33 0%, #155a2b 100%)'"
+                            onmouseout="this.style.background='linear-gradient(135deg, #2b9348 0%, #1e6b33 100%)'"
+                        >
+                            <div class="flex items-center justify-center space-x-2">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z"></path>
+                                </svg>
+                                <span>สแกน QR เพื่อชำระเงิน</span>
+                            </div>
+                        </button>
+                    </div>
+
                 </div>
-
-                <!-- QR Code Button -->
-                <div class="mb-6">
-                    <button 
-                        id="qrButton"
-                        class="w-full bg-green-700 hover:bg-green-800 text-white font-semibold py-4 px-6 rounded-lg transition duration-200 text-lg shadow-md hover:shadow-lg"
-                        style="background-color: #2b9348"
-                        onmouseover="this.style.backgroundColor='#1e6b33'"
-                        onmouseout="this.style.backgroundColor='#2b9348'"
-                    >
-                        สแกน QR เพื่อชำระเงิน
-                    </button>
-                </div>
-
-
             </div>
         </main>
 
@@ -194,5 +205,5 @@
             }
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'991e7c52a30435aa',t:'MTc2MTAyNTkxMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'991e933c764bcdea',t:'MTc2MTAyNjg1MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
